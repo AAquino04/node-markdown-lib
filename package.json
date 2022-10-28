@@ -8,13 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alura-cursos/2708-node-lib-md.git"
+    "url": "git+https://github.com/AAquino04/node-markdown-lib.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/alura-cursos/2708-node-lib-md/issues"
+    "url": "https://github.com/AAquino04/node-markdown-lib/issues"
   },
-  "homepage": "https://github.com/alura-cursos/2708-node-lib-md#readme"
+  "homepage": "https://github.com/AAquino04/node-markdown-lib#readme",
+  "dependencies": {
+    "chalk": "5.0.1"
+  }
 }
