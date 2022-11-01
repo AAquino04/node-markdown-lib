@@ -12,7 +12,7 @@ function getLinks(text) {
 }
 
 function handleError(error) {
-  throw new Error(chalk.red(error.code, error));
+  throw new Error(chalk.red(error.code, "No files on the directory."));
 }
 
 async function getFileLinks(filePath) {
