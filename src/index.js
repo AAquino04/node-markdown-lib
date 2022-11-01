@@ -26,4 +26,4 @@ async function getFile(filePath) {
   }
 }
 
-getFile('./files/texto.md');
+export default getFile;
