@@ -8,22 +8,22 @@ function getLinks(text) {
   const matches = [...text.matchAll(regex)];
   const links = matches.map((match) => ({ [match[1]]: match[2] }));
 
-  return links;
+  return links.length !== 0 ? links : "No links found on the file.";
 }
 
 function handleError(error) {
-  throw new Error(chalk.red(error.code, 'Teste'));
+  throw new Error(chalk.red(error.code, error));
 }
 
-async function getFile(filePath) {
+async function getFileLinks(filePath) {
   const encoding = 'utf-8';
 
   try {
     const text = await fs.promises.readFile(filePath, encoding);
-    console.log(getLinks(text));
+    return getLinks(text);
   } catch (error) {
     handleError(error);
   }
 }
 
-export default getFile;
+export default getFileLinks;
