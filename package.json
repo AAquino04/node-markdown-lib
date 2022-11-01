@@ -7,7 +7,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cli": "node src/cli.js ./files/texto.md",
-    "cli:validate": "node src/cli.js ./files/texto.md --validate"
+    "cli:validate": "node src/cli.js ./files/texto.md --validate",
+    "cli:fail": "node src/cli.js ./files/texto.md --fail",
+    "cli:fail-force": "node src/cli.js ./files/texto.md --fail-force"
   },
   "repository": {
     "type": "git",

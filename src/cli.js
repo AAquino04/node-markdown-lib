@@ -25,6 +25,18 @@ async function printList(validate, result, fileName = "") {
 async function processText(args) {
   const path = args[2];
   const shouldValidate = args[3] === "--validate";
+  const shouldFail = args[3] === "--fail";
+  const shouldForceFail = args[3] === "--fail-force";
+
+  if (shouldFail) {
+    console.log(chalk.red("Message before gracefully exiting with status code 1"));
+    process.exitCode = 1;
+  }
+  
+  if (shouldForceFail) {
+    console.log(chalk.red("Message before forcing exit with status code 1"));
+    process.exit(1);
+  }
 
   try {
     fs.lstatSync(path);
